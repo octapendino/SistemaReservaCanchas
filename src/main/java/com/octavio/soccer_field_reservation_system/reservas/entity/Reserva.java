@@ -11,7 +11,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @Data
@@ -25,7 +27,10 @@ public class Reserva {
     private Long id;
 
     @Column(nullable = false)
-    private LocalDateTime fechaHora;
+    private LocalDate fecha;
+
+    @Column(nullable = false)
+    private LocalTime horaInicio;
 
     @Column(precision = 10, scale = 2)
     private BigDecimal adelanto;

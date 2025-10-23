@@ -10,7 +10,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -51,6 +53,9 @@ public class Complejo {
     private Set<Cancha> canchas = new HashSet<>();
 
     @OneToMany(mappedBy = "complejo", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<FranjaHoraria> franjasHorarias = new HashSet<>();
+    private List<FranjaHoraria> franjasHorarias = new ArrayList<>();
+
+    @OneToOne(mappedBy = "complejo", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Imagen imagen;
 
 }

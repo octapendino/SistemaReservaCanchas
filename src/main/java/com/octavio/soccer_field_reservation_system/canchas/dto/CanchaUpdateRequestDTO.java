@@ -13,8 +13,7 @@ import java.math.BigDecimal;
 @Data
 @AllArgsConstructor
 @Builder
-public class CanchaRequestDTO {
-
+public class CanchaUpdateRequestDTO {
     @NotBlank(message = "El nombre de la cancha es obligatorio")
     private String nombre;
 
@@ -33,7 +32,4 @@ public class CanchaRequestDTO {
 
     @NotBlank(message = "La información sobre si es cubierta es obligatoria")
     private boolean cubierta;
-
-    @NotBlank(message = "El id del complejo es obligatorio")
-    private Long complejoId;
 }

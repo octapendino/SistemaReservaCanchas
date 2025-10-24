@@ -44,6 +44,9 @@ public class Cancha {
     @Column(nullable = false)
     private boolean iluminacion;
 
+    @Column(nullable = false)
+    private boolean cubierta;
+
     @ManyToOne
     @JoinColumn(name = "complejo_id",nullable = false)
     private Complejo complejo;
